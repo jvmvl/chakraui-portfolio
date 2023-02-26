@@ -7,6 +7,7 @@ import {VStack, Flex, Heading, Spacer, useColorMode} from '@chakra-ui/react';
 import Header from './components/Header';
 import Profile from './components/Profile';
 import Social from './components/Social';
+import Projects from './components/Projects';
 
 
 function App() {
@@ -17,7 +18,7 @@ function App() {
   return (
     <VStack p={8}>
       <Flex w="100%">
-        <Heading ml="8" size="md" fontWeight="semibold" color="cyan.400">Jvmvl</Heading>
+        <Heading ml="8" size="md" fontWeight="semibold" color="blue.500">Jvmvl</Heading>
         <Spacer></Spacer>
         <IconButton ml={2} icon={<FaInstagram />} isRound="true"></IconButton>
         <IconButton ml={2} icon={<FaGithub />} isRound="true"></IconButton>
@@ -27,6 +28,7 @@ function App() {
       <Header></Header>
       <Social></Social>
       <Profile></Profile> 
+      <Projects></Projects> 
     </VStack>
   );
 }
