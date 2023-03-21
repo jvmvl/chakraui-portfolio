@@ -28,7 +28,7 @@ function App() {
       <Header></Header>
       <Social></Social>
       <Profile></Profile> 
-      <Projects></Projects> 
+      <Projects></Projects>
     </VStack>
   );
 }
