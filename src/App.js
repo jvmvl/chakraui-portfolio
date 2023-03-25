@@ -26,9 +26,9 @@ function App() {
           <IconButton ml={8} icon={isDark ? <FaSun /> : <FaMoon />} isRound="true" onClick={toggleColorMode}></IconButton>
         </Flex>
         <Header></Header>
-        {/*<Social></Social>
+        <Social></Social>
         <Profile></Profile> 
-  <Projects></Projects>*/}
+        <Projects></Projects>
       </VStack>
   );
   }

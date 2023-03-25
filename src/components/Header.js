@@ -10,7 +10,7 @@ function Header() {
     return (
         <Stack>
             <Circle position="absolute" bg="blue.100" opacity="0.1" w="300px" h="300px" alignSelf="flex-end"></Circle>
-            <Flex direction={["column", "row"]} spacing="200px" p={isNotSmallerScreen?"32":"0"} alignSelf="flex-start">
+            <Flex direction={isNotSmallerScreen?"row":"column"} spacing="200px" p={isNotSmallerScreen?"32":"0"} alignSelf="flex-start">
                 <Box mt={isNotSmallerScreen ? "0" : 16} mr={isNotSmallerScreen ? 32 : 0} align='flex-start'>
                     <Text fontSize="5xl" fontWeight="semibold">Hello, I'm</Text>
                     <Text fontSize="7xl" fontWeight="bold" bgGradient="linear(to-r, cyan.400, blue.500, purple.600)" bgClip='text' >Jamal Chahir</Text>
