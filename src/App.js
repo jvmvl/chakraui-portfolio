@@ -27,7 +27,7 @@ function App() {
         </Flex>
         <Header></Header>
         <Social></Social>
-        <Profile></Profile> 
+        {/*<Profile></Profile>*/} 
         <Projects></Projects>
       </VStack>
   );
