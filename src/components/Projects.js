@@ -8,8 +8,10 @@ function Projects() {
     const isDark = colorMode === "dark";
     const [isNotSmallerScreen] = useMediaQuery("(min-width:600px)");
 
+    console.log('isNotSmallerScreen', isNotSmallerScreen);
+
     return ( 
-        <Container maxW="container.xl" centerContent>
+        <Container maxW="container.xl" centerContent p={0}>
             <Flex direction={isNotSmallerScreen ? "row" : "column"} >
                 <Box alignSelf="center">
                     <Box mb={8}>
@@ -18,7 +20,7 @@ function Projects() {
                         </Heading>
                         <Text mt={4}>List of projects that I have made in the past.</Text>
                     </Box>
-                    <Grid alignSelf="center" templateColumns={["1fr","repeat(2,1fr)", "repeat(3, 1fr)","repeat(3, 1fr)",]} gap={[2, 5, 5, 5]}>
+                    <Grid alignSelf="center" templateColumns={["1fr", "1fr", "repeat(2, 1fr)","repeat(3, 1fr)",]} gap={[5, 5, 5, 5]}>
                     
                         {myProjects.map((project) => {
                             return <Flex w="full" alignItems="center" justifyContent="center" key={project.name}>
