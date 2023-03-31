@@ -1,27 +1,31 @@
-import { useMediaQuery, Flex, Box, Heading, Text, Grid, Image, Tag, Button, useColorMode, Container } from '@chakra-ui/react'
+import { 
+    useMediaQuery, 
+    Flex, 
+    Box, 
+    Heading, 
+    Text, 
+    Grid, 
+    Image, 
+    Tag, 
+    Button, 
+    Container } from '@chakra-ui/react'
 import React from 'react'
 import { myProjects } from '../constants/constants'
 
 function Projects() {
-
-    const { colorMode, toggleColorMode } = useColorMode();
-    const isDark = colorMode === "dark";
     const [isNotSmallerScreen] = useMediaQuery("(min-width:600px)");
 
-    console.log('isNotSmallerScreen', isNotSmallerScreen);
-
     return ( 
-        <Container maxW="container.xl" centerContent p={0}>
+        <Container maxW="100%" centerContent>
             <Flex direction={isNotSmallerScreen ? "row" : "column"} >
-                <Box alignSelf="center">
+                <Box alignSelf="center" py="16">
                     <Box mb={8}>
                         <Heading fontWeight="bold" size="4xl">
                             Projects
                         </Heading>
                         <Text mt={4}>List of projects that I have made in the past.</Text>
                     </Box>
-                    <Grid alignSelf="center" templateColumns={["1fr", "1fr", "repeat(2, 1fr)","repeat(3, 1fr)",]} gap={[5, 5, 5, 5]}>
-                    
+                    <Grid alignSelf="center" templateColumns={["1fr", "1fr", "repeat(2, 1fr)","repeat(4, 1fr)",]} gap={[5, 5, 5, 5]}>
                         {myProjects.map((project) => {
                             return <Flex w="full" alignItems="center" justifyContent="center" key={project.name}>
                                 <Box bg="blue.500" /*bg={useColorModeValue('white', 'gray.600')}*/ maxW="sm" rounded="lg" shadow="lg">
@@ -56,7 +60,6 @@ function Projects() {
                                 </Box>
                             </Flex>;
                         })}
-
                     </Grid>
                 </Box>
             </Flex>

@@ -1,8 +1,16 @@
-import { useColorMode, useMediaQuery, Stack, Circle, Flex, Box, Text, Button, Image  } from '@chakra-ui/react';
+import { 
+    useColorMode, 
+    useMediaQuery, 
+    Stack, 
+    Circle, 
+    Flex, 
+    Box, 
+    Text, 
+    Button, 
+    Image  } from '@chakra-ui/react';
 import React from 'react'
 
 function Header() {
-
     const { colorMode } = useColorMode();
     const isDark = colorMode === "dark";
     const [isNotSmallerScreen] = useMediaQuery("(min-width:600px)");

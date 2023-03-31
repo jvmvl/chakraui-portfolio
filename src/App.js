@@ -1,9 +1,17 @@
+import {
+  FaSun, 
+  FaMoon, 
+  FaInstagram, 
+  FaGithub, 
+  FaLinkedin} from 'react-icons/fa';
+import {
+  VStack, 
+  Flex, 
+  Heading, 
+  Spacer, 
+  useColorMode, 
+  IconButton} from '@chakra-ui/react';
 import React from 'react';
-import {FaSun, FaMoon, FaInstagram, FaGithub, FaLinkedin} from 'react-icons/fa';
-import { IconButton } from '@chakra-ui/button';
-
-
-import {VStack, Flex, Heading, Spacer, useColorMode} from '@chakra-ui/react';
 import Header from './components/Header';
 import Profile from './components/Profile';
 import Social from './components/Social';
@@ -30,7 +38,7 @@ function App() {
         <Profile></Profile>
         <Projects></Projects>
       </VStack>
-  );
+    );
   }
 
 export default App;
